@@ -1,0 +1,248 @@
+@import url("https://fonts.google.com/specimen/Montserrat?query=mon");
+:root {
+  --background: #4572db;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+
+/*.content {
+  height: 200vh;
+  background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);;
+  background-blend-mode: multiply;
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  
+}
+/* nav styles starts here */
+h2 {
+    display: flex;
+    font-family: 'Montserrat' sans-serif;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 300;
+    justify-content: center;
+    color:antiquewhite;
+}
+header {
+  background: var(--background);
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 1em;
+  display: flex;
+  border: 1px;
+  height: 100%;
+  align-items: center;
+}
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  display: block;
+  background: white;
+  height: 2px;
+  width: 2em;
+  border-radius: 2px;
+  position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  content: '';
+  position: absolute;
+}
+
+.nav-toggle-label span::before {
+  bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+  top: 7px; 
+}
+
+
+nav {
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  left: 0;
+  background: var(--background);
+  width: 100%;
+  transform: scale(1,0);
+  transform-origin: top;
+  transition: transform 400ms ease-in-out;
+}
+nav ul {
+  margin:0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  margin-bottom: 1em;
+  margin-left: 1em;
+ /* display: inline-block;*/
+  
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+}
+
+nav a:hover {
+  color: #000;
+}
+
+.nav-toggle:checked ~ nav {
+  transform: scale(1,1);
+}
+
+.nav-toggle:checked ~ nav a{
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 250ms;
+}
+
+@media screen  and (min-width: 800px) {
+  .nav-toggle-label {
+    display: none;
+  }
+
+  header {
+    display: grid;
+    grid-template-columns: 1fr auto minmax(600px, 3fr);
+  }
+
+  .logo {
+    grid-column: 2 / span 1;
+  }
+
+  nav {
+    all: unset;
+    grid-column: 3 / 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  nav a {
+    opacity: 1;
+    position: relative;
+  }
+
+  nav ul {
+    display: flex;
+  }
+
+  nav li {
+    margin-left: 3em;
+    margin-bottom: 0;
+  }
+
+  nav a::before {
+    content: '';
+    display: block;
+    height: 5px;
+    background: #950404;
+    position: absolute;
+    top: -.75em;
+    left: 0;
+    right: 0;
+    transform: scale(0, 1);
+    transform-origin: left;
+    transition: transform ease-in-out 250ms;
+  }
+
+  nav a:hover::before {
+    transform: scale(1, 1);
+  }
+}
+
+
+.logo {
+    color: wheat;
+}
+img {
+   display: block; 
+   margin: auto;
+   padding-top: 8rem;
+}
+/*.profile-image {
+    display: block;
+    margin: auto;
+    padding-top: 0rem;
+    /*border-left: 100px;*/
+.profile-image > h1 {
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 6rem;
+  font-weight: 700;
+  text-align: center;
+}
+.profile-image > p {
+    font-size: 3rem;
+    font-weight: 180;
+    font-style: italic;
+    color: red;
+    text-align: center;
+}
+
+footer {
+    background-color: rgb(168, 7, 7);
+}
+
+section ul {
+    list-style: none; 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 42px;
+}
+
+#project-images {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+
+#project-images img {
+    width: auto;
+    height: 300px;
+    object-fit:scale-down;
+}
+
+#project-images img:hover {
+    content: '';
+    display: block;
+    height: 5px;
+    transform: scale(0, 1);
+    transition: transform ease-in-out 250ms;  
+}
