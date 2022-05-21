@@ -6,14 +6,16 @@
   <meta name="viewport" content="width=device-width">
   <title>Portfolio page</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="font-awesome-4.7.0\css\font-awesome.css">
 </head>
 
 <body>
   <header>
-    <h1 class="logo">Logo</h1>
+    <h1 id="About1" class="logo">Logo</h1>
     <input type="checkbox" id="nav-toggle" class="nav-toggle">
     <nav>
       <ul>
+        <li><a href="#About1">Home</a></li>
         <li><a href="#About">About</a></li>
         <li><a href="#Project">Project</a></li>
         <li><a href="#Contact">Contact</a></li>
@@ -24,8 +26,8 @@
       <span></span>
     </label>
   </header>
-  <div class="content">
-      <div>
+  <div id="About" class="content">
+      <div class="profile">
         <img src="profilepic.jpg.png" alt="my photo">
       </div>    
   </div>
@@ -36,22 +38,31 @@
   <section class="projects" id="Project">
       <h2>Below are some of my projects</h2>
   </section>
-  <div id="project-images">
-      <img src="Untitled-3.png"/>
+  <div class="project-images">
+      <img class="image" src="Untitled-3.png"/>
+      <div class="midlle">
+        <div class="text"><a href="https://promiseejikeme.github.io/JS-framework-Libraries/">JS Documentation/<br>Libraries</a></div>
+      </div>
   </div>
-  <div id="project-images">
-    <img src="survey-image.jpg"/>
+
+  <div class="project-images">
+    <img class="image" src="survey-image.jpg"/>
+    <div class="midlle">
+        <div class="text"><a href="https://promiseejikeme.github.io/freecodecamp-survey-form-clone/">Freecodecamp clone<br> survey form</a></div>
+    </div>
   </div>
  
   
 </body>
   <footer>
+    <section id="Contact" class="contact">
+        <a class="contacts" href="https://github.com/Promiseejikeme"><i class="fa fa-github fa-4x"></i></a>
+    </section>
     <section class="contact">
-      <ul>
-          <li><a id="contact" href="#"><img src="Untitled-1.png"></a></li>
-          <li><a id="contact" href="#"><img src="whatsappicon.png"></a></li>
-          <li><a id="contact" href="#"><img src="phone.png"></a></li>
-      </ul>
+        <a class="contacts" href="#"><i class="fa fa-whatsapp fa-4x"></i></a>
+    </section>
+    <section class="contact">
+        <a class="contacts" href="#"><i class="fa fa-phone fa-4x"></i></a>
     </section>
   </footer>
 
