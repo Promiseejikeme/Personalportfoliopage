@@ -182,14 +182,22 @@ nav a:hover {
   }
 }
 
+div a {
+    color:antiquewhite;
+    text-decoration: none;
+}
 
 .logo {
     color: wheat;
 }
-img {
+.profile img {
    display: block; 
    margin: auto;
+   justify-content: center;
+   align-items: center;
+   padding: auto;
    padding-top: 8rem;
+   padding-bottom: 0;
 }
 /*.profile-image {
     display: block;
@@ -211,38 +219,69 @@ img {
     text-align: center;
 }
 
+
+.project-images img {
+    display: flex;
+    margin: auto;
+    width: 20%;
+    background-color: antiquewhite;
+    box-shadow: 0 4px 8px 0 hsl(0, 89%, 35%), 0 6px 20px 0 rgba(158, 7, 7, 0.829);
+    margin-bottom: 25px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.project-images {
+    flex:33.3%;
+    padding: 10px;
+}
+
+.image {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.project-images:hover .image {
+    opacity: 0.3;
+}
+  
+.project-images:hover .middle {
+    opacity: 1;
+}
+  
+.text {
+    color: antiquewhite;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
 footer {
     background-color: rgb(168, 7, 7);
 }
 
-section ul {
-    list-style: none; 
+.contact {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding-bottom: 42px;
-}
-
-#project-images {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    
-    
+    padding-top: 22px;
+    padding-bottom: 22px;
 }
 
-#project-images img {
-    width: auto;
-    height: 300px;
-    object-fit:scale-down;
-}
-
-#project-images img:hover {
-    content: '';
-    display: block;
-    height: 5px;
-    transform: scale(0, 1);
-    transition: transform ease-in-out 250ms;  
+.contacts {
+    flex: 
 }
